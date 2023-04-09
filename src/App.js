@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react'
+import { Container } from './Components/Styles/Container.Styled'
+import Header from './Components/Header'
+import Songs from './Components/Songs';
 
 function App() {
+  const [songs, setSongs] = useState([
+    {
+      id: 1,
+      song: 'aaaa',
+      singer: 'mr A' 
+    },
+
+    {
+      id: 2,
+      song: 'bbbb',
+      singer: 'mr B' 
+    },
+
+    {
+      id: 3,
+      song: 'cccc',
+      singer: 'mr C' 
+    },
+
+    {
+      id: 4,
+      song: 'dddd',
+      singer: 'mr D' 
+    },
+  ])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Container>
+      <Header /> 
+      <Songs songs={songs} key={songs.id}/>
+    </Container>);
 }
 
 export default App;
