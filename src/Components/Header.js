@@ -5,10 +5,10 @@ import { StyledHeader } from './Styles/Header.styled'
 const Header = () => {
   return (
     <StyledHeader className='header'>
-     <h3> Playlist </h3>
-     <button className='img_btn'>
+      <h3> Playlist </h3>
+      <button className='img_btn'>
         <FaPlus/>
-     </button>
+      </button>
    </StyledHeader>
  )
 }

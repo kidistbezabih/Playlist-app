@@ -1,16 +1,16 @@
-import { FaEllipsisV, FaPlay } from "react-icons/fa";
+import { FaEllipsisV } from "react-icons/fa"
+// import MusicDetail from './MusicDetail'
 import { StyleSong } from './Styles/Song.styled'
+import Play from './Play'
+
 
 const Song = ({ song }) => {
   return (
-    <StyleSong className="song">
+    <StyleSong>
+      <Play song = {song}/>
       <button>
-        <FaPlay/>
+        <FaEllipsisV/>
       </button>
-      <h3>{song.song}
-        <button><FaEllipsisV/></button>
-      </h3>
-      <h5>{song.singer}</h5>
     </StyleSong>
   )
 }
